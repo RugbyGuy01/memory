@@ -64,7 +64,7 @@ class MemoryViewModel : ViewModel() {
         }
     }
 
-    private fun compareValues(first: Int, second: Int) {
+    private fun vinCompareValues(first: Int?, second: Int?) {
         val cards = _state.value.cards.copyOf() // make an array of cards
         if (second != null && first != null) {
             val card1 = cards[first]
@@ -105,7 +105,7 @@ class MemoryViewModel : ViewModel() {
 
         if (delayedCompareJob != null) {
             delayedCompareJob?.cancel()
-            compareValues(firstIndex, secondIndex)
+            vinCompareValues(firstIndex, secondIndex)
         }
     }
 
@@ -132,7 +132,7 @@ class MemoryViewModel : ViewModel() {
                     false
                 if(!cardsMatchSkipDelay)
                     delay(2000)
-                compareValues(firstIndex, secondIndex)
+                vinCompareValues(firstIndex, secondIndex)
             }
         }
     }

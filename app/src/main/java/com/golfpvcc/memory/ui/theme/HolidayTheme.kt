@@ -14,7 +14,6 @@ interface HolidayTheme {
     val cardFrontBaseColor: Color
     val matchedOutlineColor: Color
     val iconColor: Color
-    val resetIconColor: Color
     val imageMap: Map<Int, Int>
 
     fun getImageResourceForNumber(number: Int): Int?
@@ -31,7 +30,6 @@ class ThanksgivingTheme(
     override val cardFrontBaseColor: Color = Colors.Tan,
     override val matchedOutlineColor: Color = Colors.DarkGreen,
     override val iconColor: Color = Colors.Brown,
-    override val resetIconColor: Color = Colors.Tan,
     override val imageMap: Map<Int, Int> = mapOf(
         1 to R.drawable.tg1,
         2 to R.drawable.tg2,
@@ -60,7 +58,6 @@ class HalloweenTheme(
     override val cardFrontBaseColor: Color = Colors.BlueWhite,
     override val matchedOutlineColor: Color = Colors.DarkGreen,
     override val iconColor: Color = Colors.Orange,
-    override val resetIconColor: Color = Colors.Tan,
     override val imageMap: Map<Int, Int> = mapOf(
         1 to R.drawable.hw1,
         2 to R.drawable.hw2,
@@ -91,7 +88,6 @@ class ChristmasTheme(
     override val cardFrontBaseColor: Color = Colors.LightBlue,
     override val matchedOutlineColor: Color = Colors.DarkGreen,
     override val iconColor: Color = Color.White,
-    override val resetIconColor: Color = Colors.Tan,
     override val imageMap: Map<Int, Int> = mapOf(
         1 to R.drawable.cm1,
         2 to R.drawable.cm2,
